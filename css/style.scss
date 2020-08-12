@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+/* === variáveis === */
+
+$bg-btn: #723ec7;
+$bg-form: #2f3152;
+$color-title-btn: #f9fbfc;
+$bg-hover: #583099;
+$bg-banner: #262843;
+$color-text: #a9a9b7;
+$border-input: #393b63;
+$color-placeholder: #75778e;
+
+body {
+	height: 100vh;
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	font-family: "Roboto", sans-serif;
+
+	.container {
+		display: flex;
+		align-items: center;
+		align-content: center;
+	}
+
+	/* === Formulário === */
+
+	.form {
+		width: 400px;
+		height: 500px;
+		padding: 70px 60px;
+		background: $bg-form;
+		border-radius: 9px 0 0 9px;
+
+		form {
+			height: 100%;
+			position: relative;
+
+			h1 {
+				font-size: 32px;
+				text-align: center;
+				margin-bottom: 30px;
+				color: $color-title-btn;
+			}
+
+			.input-group {
+				display: flex;
+				margin-bottom: 13px;
+
+				input:nth-child(2) {
+					margin-left: 13px;
+				}
+			}
+
+			input {
+				width: 100%;
+				display: block;
+				padding: 8px 8px;
+				background: none;
+				color: $color-text;
+				border-radius: 4px;
+				border: 1px solid $border-input;
+			}
+
+			small {
+				display: block;
+				font-size: 12px;
+				margin-top: 10px;
+				color: $color-text;
+			}
+
+			.gap {
+				margin-top: 20px;
+			}
+
+			input::placeholder {
+				font-size: 12px;
+				color: $color-placeholder;
+			}
+
+			.text-center {
+				text-align: center;
+			}
+
+			input[type="submit"] {
+				bottom: 30px;
+				border: none;
+				padding: 10px;
+				font-weight: 900;
+				position: absolute;
+				background: $bg-btn;
+				color: $color-title-btn;
+				text-transform: uppercase;
+			}
+
+			input[type="submit"]:hover {
+				background: $bg-hover;
+			}
+		}
+	}
+
+	/* === Banner === */
+
+	aside {
+		width: 400px;
+		display: grid;
+		height: 510px;
+		align-content: end;
+		justify-content: center;
+		border-radius: 0 9px 9px 0;
+		box-shadow: 0 0 10px -2px #000;
+		background: url(https://i.imgur.com/KAy68e1.png) no-repeat center center /
+			cover $bg-banner;
+	}
+}
